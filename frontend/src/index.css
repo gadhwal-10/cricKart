@@ -1,0 +1,50 @@
+:root { 
+
+    --primary-main: #0A192F;  
+    --primary-dark: #050B16;  
+    --primary-light: #1E2A44;   
+
+   
+    --bg-primary: #0D1B2A;      
+    --bg-secondary: #16243B;    
+
+   
+    --text-primary: #E6EDF3;    
+    --text-secondary: #AABACD; 
+    --text-light: #FFFFFF;      
+
+    
+    --accent-gold: #FFD700;    
+    --accent-green: #2ECC71;    
+
+ 
+    --border-color: #233554;    
+
+    
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.4); 
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+html {
+  scrollbar-width: none; /* Firefox */
+}
+
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  background-color: var(--bg-primary);
+}
+
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}

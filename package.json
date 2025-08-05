@@ -1,0 +1,32 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/server.js" ,
+    "dev": "nodemon backend/server.js" ,
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.7.0",
+    "cookie-parser": "^1.4.7",
+    "crypto": "^1.0.1",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "express-fileupload": "^1.5.2",
+    "gsap": "^3.13.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.4",
+    "nodemailer": "^7.0.5",
+    "nodemon": "^3.1.10",
+    "redux-persist": "^6.0.0",
+    "validator": "^13.15.15"
+  }
+}

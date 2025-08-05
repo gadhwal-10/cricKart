@@ -1,0 +1,27 @@
+.about-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: wheat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-heading {
+margin-top: 6rem;
+text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: orange; /* Optional: primary color for CricKart */
+}
+
+.about-paragraph {
+  margin-bottom: 1.2rem;
+}
+
+.about-paragraph em {
+  font-style: italic;
+  color: green;
+}
