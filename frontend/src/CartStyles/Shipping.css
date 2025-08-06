@@ -58,10 +58,11 @@
     outline: none;
     border-color: var(--primary-main);
     box-shadow: 0 0 0 3px rgba(108, 91, 123, 0.2);
+    background-color: black;
    }
    
    .shipping-form-group input::placeholder {
-    color: var( --bg-secondary);
+    color: wheat;
     opacity: 0.7;
    }
    
