@@ -5,9 +5,6 @@
 
 Crickart is a modern, full-featured e-commerce platform built using the MERN stack, specifically focused on selling cricket equipment. It offers a seamless shopping experience for cricket lovers to explore, add to cart, and purchase cricket gear.
 
-### ADMIN LOGIN:-
-Email- admin@gmail.com                 Password- 12345678
-
 ---
 
 ## 🚀 Features
