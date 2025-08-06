@@ -43,7 +43,7 @@ function App() {
   return (
    <Router>
 
-     <MouseFollower />
+     <MouseFollower/>
      
     <Routes>
       <Route path="/" element={<Home/>}/>
