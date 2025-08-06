@@ -29,7 +29,7 @@ import UpdateRole from './Admin/UpdateRole';
 import OrdersList from './Admin/OrdersList';
 import UpdateOrder from './Admin/UpdateOrder';
 import ReviewsList from './Admin/ReviewsList';
-import MouseFollower from './components/mouseFollower';
+import MouseFollower from './components/MouseFollower';
 
 function App() {
   const {isAuthenticated,user}=useSelector(state=>state.user);
@@ -42,7 +42,9 @@ function App() {
   
   return (
    <Router>
-    <MouseFollower/>
+
+     <MouseFollower />
+     
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/product/:id" element={<ProductDetails/>}/>
@@ -61,7 +63,7 @@ function App() {
       <Route path="/order/confirm" element={<ProtectedRoute element={<OrderConfirm/>}/>}/>
       <Route path="/orders/user" element={<ProtectedRoute element={<MyOrders/>}/>}/>
       <Route path="/order/:orderId" element={<ProtectedRoute element={<OrderDetails/>}/>}/>
-    
+      {/* Admin Routes */}
       <Route path="/admin/dashboard" element={<ProtectedRoute element={<Dashboard/>} adminOnly={true}/>}/>
       <Route path="/admin/products" element={<ProtectedRoute element={<ProductsList/>} adminOnly={true}/>}/>
       <Route path="/admin/product/create" element={<ProtectedRoute element={<CreateProduct/>} adminOnly={true}/>}/>
