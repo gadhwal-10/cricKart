@@ -6,25 +6,36 @@ import { sendToken } from '../utils/jwtToken.js';
 import { sendEmail } from '../utils/sendEmail.js';
 import {v2 as cloudinary} from 'cloudinary';
 
-export const registerUser=handleAsyncError(async(req , res , next)=>{
-    const {name,email,password,avatar}=req.body;
-    const myCloud= await cloudinary.uploader.upload(avatar,{
-        folder:'avatars',
-        width:150,
-        crop:'scale'
-    })
-    const user=await User.create({
-        name,
-        email,
-        password,
-        avatar:{
-            public_id:myCloud.public_id,
-            url:myCloud.secure_url
+export const registerUser = handleAsyncError(async (req, res, next) => {
+  const { name, email, password, avatar } = req.body;
 
-        }
-    })
-    sendToken(user,201,res)
-})
+  let avatarData = {
+    public_id: 'default_avatar_local',
+    url: '/images/profile.png' 
+  };
+
+  if (avatar) {
+    const myCloud = await cloudinary.uploader.upload(avatar, {
+      folder: 'avatars',
+      width: 150,
+      crop: 'scale'
+    });
+
+    avatarData = {
+      public_id: myCloud.public_id,
+      url: myCloud.secure_url
+    };
+  }
+
+  const user = await User.create({
+    name,
+    email,
+    password,
+    avatar: avatarData
+  });
+
+  sendToken(user, 201, res);
+});
 
 // Login
 export const loginUser=handleAsyncError(async(req , res, next)=>{
