@@ -31,19 +31,28 @@ function Register() {
         }
     }
 
-    const registerSubmit=(e)=>{
-        e.preventDefault();
-        if(!name || !email || !password){
-            toast.error('Please fill out all the required fields',{position:'top-center',autoClose:3000})
-            return;
-        }
-       const myForm= new FormData();
-       myForm.set('name',name)
-       myForm.set('email',email)
-       myForm.set('password',password)
-       myForm.set('avatar',avatar)
-       dispatch(register(myForm))
+     const registerSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name || !email || !password) {
+        toast.error('Please fill out all the required fields', {
+            position: 'top-center',
+            autoClose: 3000
+        });
+        return;
     }
+
+    const myForm = new FormData();
+    myForm.set('name', name);
+    myForm.set('email', email);
+    myForm.set('password', password);
+
+    if (avatar) {
+        myForm.set('avatar', avatar);
+    }
+
+    dispatch(register(myForm));
+};
       useEffect(()=>{
         if(error){
           toast.error(error,{position:'top-center',autoClose:3000});
