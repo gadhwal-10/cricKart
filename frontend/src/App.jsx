@@ -8,7 +8,6 @@ import Register from './User/Register';
 import Login from './User/Login';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadUser } from './features/user/userSlice';
-import UserDashboard from './User/UserDashboard';
 import Profile from './User/Profile';
 import ProtectedRoute from './components/ProtectedRoute';
 import UpdateProfile from './User/UpdateProfile';
@@ -74,7 +73,6 @@ function App() {
       <Route path="/admin/order/:orderId" element={<ProtectedRoute element={<UpdateOrder/>} adminOnly={true}/>}/>
       <Route path="/admin/reviews" element={<ProtectedRoute element={<ReviewsList/>} adminOnly={true}/>}/>
     </Routes>
-    {isAuthenticated && <UserDashboard user={user}/>}
    </Router>
   )
 }
