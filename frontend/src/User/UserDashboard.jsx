@@ -56,7 +56,7 @@ function UserDashboard({user}) {
   return (
     <>
     <div className={`overlay ${menuVisible?'show':''}`} onClick={toggleMenu}></div>
-    <div className="dashboard-container">
+    <div className="user-nav-dropdown-container">
         <div className="profile-header" onClick={toggleMenu}>
             <img src={user.avatar.url?user.avatar.url:'./images/profile.png'} alt="Profile Picture" className='profile-avatar'/>
             <span className="profile-name">{user.name || 'User'}</span>
