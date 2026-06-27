@@ -24,15 +24,19 @@ function UserDashboard({user}) {
         })
     }
     function orders(){
-        navigate("/orders/user")
+        setMenuVisible(false);
+        navigate("/orders/user");
     }
     function profile(){
-        navigate("/profile")
+        setMenuVisible(false);
+        navigate("/profile");
     }
     function myCart(){
-        navigate("/cart")
+        setMenuVisible(false);
+        navigate("/cart");
     }
     function logoutUser(){
+       setMenuVisible(false);
        dispatch(logout())
        .unwrap()
        .then(()=>{
@@ -46,8 +50,8 @@ function UserDashboard({user}) {
         
     }
     function dashboard(){
-        navigate("/admin/dashboard")
-
+        setMenuVisible(false);
+        navigate("/admin/dashboard");
     }
   return (
     <>
