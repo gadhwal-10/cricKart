@@ -4,6 +4,9 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    max-width: 100vw;
+    box-sizing: border-box;
 }
 
 .confirm-header {
@@ -17,6 +20,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    overflow-x: auto;
+    width: 100%;
 }
 
 .confirm-table {
