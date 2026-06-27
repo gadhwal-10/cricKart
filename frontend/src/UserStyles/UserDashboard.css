@@ -100,19 +100,9 @@
     .profile-avatar {
         width: 36px;
         height: 36px;
-        margin-right: 6px;
+        margin-right: 0;
     }
-    .profile-name {
-        font-size: 15px;
-        max-width: 70px;
-    }
-}
-
-@media (max-width: 576px) {
     .profile-name {
         display: none;
-    }
-    .profile-avatar {
-        margin-right: 0;
     }
 }
