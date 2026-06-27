@@ -71,7 +71,7 @@ function ProductsList() {
                     <td><img src={product.image[0].url} alt={product.name} className='admin-product-image'/></td>
                     <td>{product.name}</td>
                     <td>{product.price}/-</td>
-                    <td>{product.ratings}</td>
+                    <td>{Number(product.ratings || 0).toFixed(1)}</td>
                     <td>{product.category}</td>
                     <td>{product.stock}</td>
                     <td>{new Date(product.createdAt).toLocaleString()}</td>
