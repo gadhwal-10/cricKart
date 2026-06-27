@@ -69,7 +69,7 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    width: 250px;
+    width: auto;
   }
   
 .icon {
@@ -174,7 +174,8 @@
       justify-content: flex-start;
     }
     .navbar-icons{
-      width: 300px;
+      width: auto;
+      justify-content: flex-end;
     }
   }
   
