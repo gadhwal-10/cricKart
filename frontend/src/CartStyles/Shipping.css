@@ -19,8 +19,17 @@
    }
    
    @media (max-width: 768px) {
-    form {
-      grid-template-columns: 1fr;
+    .shipping-form-container {
+      padding: 0 10px;
+      width: 100%;
+      max-width: 100vw;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    .shipping-form, form {
+      grid-template-columns: 1fr !important;
+      gap: 20px;
+      width: 100%;
     }
    }
    
