@@ -52,3 +52,22 @@
   .checkoutPath-step[completed="true"]::after {
     background: #10b981;
   }
+
+  @media (max-width: 768px) {
+    .checkoutPath {
+      padding: 1.5rem 0.5rem;
+      gap: 0.5rem;
+      max-width: 100vw;
+      overflow-x: hidden;
+      box-sizing: border-box;
+    }
+    .checkoutPath-step:not(:last-child)::after {
+      display: none;
+    }
+    .checkoutPath-label {
+      font-size: 0.75rem;
+    }
+    .checkoutPath-icon {
+      padding: 0.5rem;
+    }
+  }
